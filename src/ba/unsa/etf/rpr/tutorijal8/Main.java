@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class Main extends Application {
+    public static Stage stage;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -18,6 +19,7 @@ public class Main extends Application {
         loader.setController(new Controller(model));
         Parent root = loader.load();
         primaryStage.setTitle("Pretraga datoteka");
+        stage = primaryStage;
         primaryStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         primaryStage.show();
 
